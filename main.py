@@ -1,88 +1,98 @@
 '''
-Create a Employee Class
-
+Module Docstring
 '''
-class Employee():
 
-# Define the details for the Employee class
-    def __init__(self, name,dob,emp_id):
+
+class Employee():
+    '''
+    Create a Employee Class
+    '''
+    # Define the details for the Employee class
+    def __init__(self, name, dob, emp_id):
         self.name = name
         self.dob = dob
-        self.id = emp_id
+        self.emp_id = emp_id
 
+# Add a __str__ method to give a Human readable desciption of the class.
 
-# Add a __str__ method to give a Human readable desciption of the class. 
     def __str__(self):
         return "This is the Employee Class __str__"
 
-# Add a __repr__ method to return the Class used to create the object
-    def __repr__(self):    
+# Add a __repr__ method to return the Class used to create the object.
+
+    def __repr__(self):
         return "Employee(self, name,dob,emp_id)"
 
 # Method to display the Employee's information
 
     def display(self):
-        print('\n') # Inserts new line.
+        '''
+        Function Docstring
+        '''
+        print('\n')  # Inserts new line.
         print("The Employee's name is: " + self.name)
         print("The Employee's date of Birth is " + self.dob)
-        print("The Employee's ID is " + self.id)
+        print("The Employee's ID is " + self.emp_id)
         print("\n")
 
-'''
-Create a Sub Class of Employee for Temporary Employees
-'''
 
 class Temporary(Employee):
 
-    number_of_temp_emp = 0  # Class variable to allow tracking of number of Employees
+    '''
+    Create a Sub Class of Employee for Temporary Employees
+    '''
+
+    # Class variable to allow tracking of number of Employees
+    no_of_temp_emp = 0
 
     def __init__(self, name, dob, emp_id):
-        super().__init__(name, dob, emp_id) # Attributes inherited from Employee Class
-        self.hourlyrate = None              # Hourly Rate specific to Temporary Class
-        self.weeklyhours = None             # Weekly Hours specific to Temporary Class
-        self.tgp = None                     # Temporary Gross Weekly Pay
-        Temporary.number_of_temp_emp = Temporary.number_of_temp_emp + 1  # Add to running total of Temporary Employees
+        super().__init__(name, dob, emp_id)  # Inherited from Employee Class
+        self.hourlyrate = None               # Specific to Temporary Class
+        self.weeklyhours = None              # Specific to Temporary Class
+        self.tgp = None                      # Temporary Gross Weekly Pay
+        # Add to running total of Temporary Employees
+        Temporary.no_of_temp_emp = Temporary.no_of_temp_emp + 1
 
-# Add a __str__ method to give a Human readable desciption of the class. 
+    # Add a __str__ method to give a Human readable desciption of the class.
 
     def __str__(self):
         return "This is the Temporary Employee Class __str__method"
 
-# Add a __repr__ method to return the Class used to create the object
+    # Add a __repr__ method to return the Class used to create the object
 
     def __repr__(self):
         return "Temporary(self, name,dob,emp_id)"
 
-# Method to calculate the gross weekly wage of the Employee
+    # Method to calculate the gross weekly wage of the Employee
 
     def salary_info(self):
+        '''
+        Function Docstring
+        '''
         self.tgp = (self.hourlyrate * self.weeklyhours)
         print('\n')
-        print(f'Contract Type is Temporary')
-        print(f'Employee hourly rate is: £{self.hourlyrate}')
-        print(f'Employee contracted weekly hours are: {self.weeklyhours} hours')
-        print(f'Employee gross weekly salary is: £{self.tgp}')
+        print('Contract Type is Temporary')
+        print(f'Employee hourly rate: £{self.hourlyrate}')
+        print(f'Employee contracted weekly hours:{self.weeklyhours} hours')
+        print(f'Employee gross weekly salary: £{self.tgp}')
 
-        
-
-'''
-Create a Sub Class of Employee for Permanent Employees
-'''
 
 class Permanent(Employee):
-
-    number_of_perm_emp = 0 # Class variable to allow tracking of number of Employees
-
+    '''
+    Create a Sub Class of Employee for Permanent Employees
+    '''
+    # Class variable to allow tracking of number of Employees
+    no_of_perm_emp = 0
 
     def __init__(self, name, dob, emp_id, ):
-        super().__init__(name, dob, emp_id) # Attributes inherited from Employee Class
-        self.annualsalary = None            # Annual Salary specific to Permanent Class
-        self.pensionplan = None             # Pension Plan Status for Permanent Class
-        self.pgp = None                     # Permanent Gross Weekly Pay
+        super().__init__(name, dob, emp_id)  # Inherited from Employee Class
+        self.annualsalary = None             # Specific to Permanent Class
+        self.pensionplan = None              # Sepcific to Permanent Class
+        self.pgp = None                      # Permanent Gross Weekly Pay
         # Increment the number of permanent employees by 1
-        Permanent.number_of_perm_emp = Permanent.number_of_perm_emp + 1
+        Permanent.no_of_perm_emp = Permanent.no_of_perm_emp + 1
 
-# Add a __str__ method to give a Human readable desciption of the class. 
+# Add a __str__ method to give a Human readable desciption of the class.
 
     def __str__(self):
         return "This is the Permanent Employee Class __str__ method"
@@ -94,29 +104,32 @@ class Permanent(Employee):
 
 # Add a method to calculate the Permanent Gross Weekly salary
     def salary_info(self):
+        '''
+        Function Docstring
+        '''
         self.pgp = (self.annualsalary / 52)
         print('\n')
-        print(f'Contract Type is Permanent')
-        print(f'Employee Annual Salary is: £{self.annualsalary}')
+        print('Contract Type is Permanent')
+        print(f'Employee Annual Salary: £{self.annualsalary}')
         print(f'Employee Pension Scheme Status: {self.pensionplan}')
-        print(f'Employee gross weekly salary is: £{self.pgp}')
+        print(f'Employee gross weekly salary: £{self.pgp}')
 
 
-# Create an Employee   
+# Create an Employee
 
-john=Temporary('John Wall', '19/06/1975', 'E0001')
+john = Temporary('John Wall', '19/06/1975', 'E0001')
 john.hourlyrate = float(5.55)
 john.weeklyhours = float(37.5)
 
-stuart=Permanent('Stuart Riding', '06/06/1975', 'E0002')
+stuart = Permanent('Stuart Riding', '06/06/1975', 'E0002')
 stuart.annualsalary = 36000
 stuart.pensionplan = "Member"
 
-#Program to access the data
+# Program to access the data
 
-active = True
+ACTIVE = True
 
-while active == True:
+while ACTIVE is True:
     print("\n")
     print("Please choose from the following options: ")
     print("\n")
@@ -125,29 +138,39 @@ while active == True:
     print("3. Employee Details")
     print("\n")
     command = input("> ")
-    #Check the command entered
-    if command == "1": # Print the Class Details.  Display the output of the __str__ methods for each sub-class
+    # Check the command entered
+    if command == "1":
+        # Print the Class Details.
+        # Display the output of the __str__ methods for each sub-class
         print(stuart)
         print(john)
-    elif command == "2": # Print the Employee Numbers
-        all = int(Temporary.number_of_temp_emp) + int(Permanent.number_of_perm_emp)
-        print(f"Total number of Temporary Employees: {Temporary.number_of_temp_emp}")
-        print(f"Total number of Permanent Employees: {Permanent.number_of_perm_emp}")
-        print(f"Total number of Employees: {all}")        
-    elif command == "3": #Enter a second loop to access Employee Details
+    elif command == "2":
+        # Print the Employee Numbers
+        all_emp = int(Temporary.no_of_temp_emp) + int(Permanent.no_of_perm_emp)
+        print(f"Total No. of Temporary Employees:{Temporary.no_of_temp_emp}")
+        print(f"Total No. of Permanent Employees:{Permanent.no_of_perm_emp}")
+        print(f"Total No. of Employees: {all_emp}")
+    elif command == "3":
+        # Enter a second loop to access Employee Details
         print("\n")
-        print("Select your Employee:") # Select which Employee details you wish to see
+        print("Select your Employee:")
+        # Select which Employee details you wish to see
         print("1. John Wall")
         print("2. Stuart Riding")
         selection = input("> ")
         if selection == "1":
-            john.display() # Display the Employee's Personal Data.  Method from the Parent Class
-            john.salary_info() # Display the Employee's Salary datat.  Method fromt he Sub Classe 
+            john.display()
+            # Display the Employee's Personal Data.  Method from Parent Class
+            john.salary_info()
+            # Display the Employee's Salary datat.  Method from Sub Class
         elif selection == "2":
-            stuart.display()  # Display the Employee's Personal Data.  Method from the Parent Class
-            stuart.salary_info() # Display the Employee's Salary datat.  Method fromt he Sub Classe 
+            stuart.display()
+            # Display the Employee's Personal Data.  Method from Parent Class
+            stuart.salary_info()
+            # Display the Employee's Salary datat.  Method from Sub Class
         else:
-            print("Invalid ID.  Please try again.") # Invalid Employee entered.  Start Again
+            print("Invalid ID.  Please try again.")
+            # Invalid Employee entered.  Start Again
     else:
-        active = False  # Press any other button, and the programme ends
-
+        ACTIVE = False
+        # Press any other button, and the programme ends
