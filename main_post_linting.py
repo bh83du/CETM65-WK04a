@@ -12,7 +12,6 @@ class Employee():
         self.name = name
         self.dob = dob
         self.emp_id = emp_id
-        self.email = self.emp_id + "@testcompany.com"
 
 # Add a __str__ method to give a Human readable desciption of the class.
 
@@ -24,8 +23,6 @@ class Employee():
     def __repr__(self):
         return "Employee(self, name,dob,emp_id)"
 
-# Method to 
-
 # Method to display the Employee's information
 
     def display(self):
@@ -36,8 +33,6 @@ class Employee():
         print("The Employee's name is: " + self.name)
         print("The Employee's date of Birth is " + self.dob)
         print("The Employee's ID is " + self.emp_id)
-        print("The Employee's Email Address is " + self.email)
-        print("The Employee's Contract Type is: " + self.__class__.__name__)
         print("\n")
 
 
@@ -76,6 +71,7 @@ class Temporary(Employee):
         '''
         self.tgp = (self.hourlyrate * self.weeklyhours)
         print('\n')
+        print('Contract Type is Temporary')
         print(f'Employee hourly rate: £{self.hourlyrate}')
         print(f'Employee contracted weekly hours:{self.weeklyhours} hours')
         print(f'Employee gross weekly salary: £{self.tgp}')
@@ -113,6 +109,7 @@ class Permanent(Employee):
         '''
         self.pgp = (self.annualsalary / 52)
         print('\n')
+        print('Contract Type is Permanent')
         print(f'Employee Annual Salary: £{self.annualsalary}')
         print(f'Employee Pension Scheme Status: {self.pensionplan}')
         print(f'Employee gross weekly salary: £{self.pgp}')
@@ -165,12 +162,12 @@ while ACTIVE is True:
             john.display()
             # Display the Employee's Personal Data.  Method from Parent Class
             john.salary_info()
-            # Display the Employee's Salary data.  Method from Sub Class
+            # Display the Employee's Salary datat.  Method from Sub Class
         elif selection == "2":
             stuart.display()
             # Display the Employee's Personal Data.  Method from Parent Class
             stuart.salary_info()
-            # Display the Employee's Salary data.  Method from Sub Class
+            # Display the Employee's Salary datat.  Method from Sub Class
         else:
             print("Invalid ID.  Please try again.")
             # Invalid Employee entered.  Start Again

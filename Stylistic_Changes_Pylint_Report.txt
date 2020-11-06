@@ -1,0 +1,4 @@
+(CSTM65-WK04a) C:\Users\sriding\OneDrive - University of Sunderland - LIVE\03 - DTS L7\01 - CSTM65\01 - GIT\CSTM65-WK04a>pylint main.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)

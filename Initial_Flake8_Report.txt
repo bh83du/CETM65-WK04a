@@ -1,0 +1,58 @@
+main_pre_linting.py:6:1: E115 expected an indented block (comment)
+main_pre_linting.py:7:28: E231 missing whitespace after ','
+main_pre_linting.py:7:32: E231 missing whitespace after ','
+main_pre_linting.py:13:73: W291 trailing whitespace
+main_pre_linting.py:14:5: E301 expected 1 blank line, found 0
+main_pre_linting.py:18:24: W291 trailing whitespace
+main_pre_linting.py:24:20: E261 at least two spaces before inline comment
+main_pre_linting.py:30:1: E305 expected 2 blank lines after class or function definition, found 1
+main_pre_linting.py:34:1: E302 expected 2 blank lines, found 1
+main_pre_linting.py:36:80: E501 line too long (85 > 79 characters)
+main_pre_linting.py:39:44: E261 at least two spaces before inline comment
+main_pre_linting.py:39:80: E501 line too long (86 > 79 characters)
+main_pre_linting.py:40:80: E501 line too long (85 > 79 characters)
+main_pre_linting.py:41:80: E501 line too long (86 > 79 characters)
+main_pre_linting.py:43:80: E501 line too long (118 > 79 characters)
+main_pre_linting.py:45:73: W291 trailing whitespace
+main_pre_linting.py:60:15: F541 f-string is missing placeholders
+main_pre_linting.py:62:80: E501 line too long (80 > 79 characters)
+main_pre_linting.py:67:1: E303 too many blank lines (3)
+main_pre_linting.py:71:1: E302 expected 2 blank lines, found 1
+main_pre_linting.py:73:27: E261 at least two spaces before inline comment
+main_pre_linting.py:73:80: E501 line too long (84 > 79 characters)
+main_pre_linting.py:76:5: E303 too many blank lines (2)
+main_pre_linting.py:77:44: E261 at least two spaces before inline comment
+main_pre_linting.py:77:80: E501 line too long (86 > 79 characters)
+main_pre_linting.py:78:80: E501 line too long (87 > 79 characters)
+main_pre_linting.py:79:80: E501 line too long (85 > 79 characters)
+main_pre_linting.py:84:73: W291 trailing whitespace
+main_pre_linting.py:98:15: F541 f-string is missing placeholders
+main_pre_linting.py:104:21: W291 trailing whitespace
+main_pre_linting.py:106:5: E225 missing whitespace around operator
+main_pre_linting.py:110:7: E225 missing whitespace around operator
+main_pre_linting.py:114:1: E265 block comment should start with '# '
+main_pre_linting.py:118:14: E712 comparison to True should be 'if cond is True:' or 'if cond:'
+main_pre_linting.py:127:5: E265 block comment should start with '# '
+main_pre_linting.py:128:23: E261 at least two spaces before inline comment
+main_pre_linting.py:128:80: E501 line too long (111 > 79 characters)
+main_pre_linting.py:131:25: E261 at least two spaces before inline comment
+main_pre_linting.py:132:80: E501 line too long (83 > 79 characters)
+main_pre_linting.py:133:80: E501 line too long (85 > 79 characters)
+main_pre_linting.py:134:80: E501 line too long (85 > 79 characters)
+main_pre_linting.py:135:51: W291 trailing whitespace
+main_pre_linting.py:136:25: E261 at least two spaces before inline comment
+main_pre_linting.py:136:26: E262 inline comment should start with '# '
+main_pre_linting.py:138:39: E261 at least two spaces before inline comment
+main_pre_linting.py:138:80: E501 line too long (86 > 79 characters)
+main_pre_linting.py:143:27: E261 at least two spaces before inline comment
+main_pre_linting.py:143:80: E501 line too long (96 > 79 characters)
+main_pre_linting.py:144:31: E261 at least two spaces before inline comment
+main_pre_linting.py:144:80: E501 line too long (97 > 79 characters)
+main_pre_linting.py:144:98: W291 trailing whitespace
+main_pre_linting.py:146:80: E501 line too long (99 > 79 characters)
+main_pre_linting.py:147:33: E261 at least two spaces before inline comment
+main_pre_linting.py:147:80: E501 line too long (99 > 79 characters)
+main_pre_linting.py:147:100: W291 trailing whitespace
+main_pre_linting.py:149:52: E261 at least two spaces before inline comment
+main_pre_linting.py:149:80: E501 line too long (92 > 79 characters)
+main_pre_linting.py:151:73: W292 no newline at end of file
